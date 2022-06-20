@@ -1,0 +1,36 @@
+{
+  "canisters": {
+    "saveSoilDao": {
+      "candid": "src/saveSoilDao/saveSoilDao.did",
+      "package": "saveSoilDao",
+      "type": "rust"
+    },
+    "saveSoilDao_assets": {
+      "dependencies": [
+        "saveSoilDao"
+      ],
+      "frontend": {
+        "entrypoint": "src/saveSoilDao_assets/src/index.html"
+      },
+      "source": [
+        "src/saveSoilDao_assets/assets",
+        "dist/saveSoilDao_assets/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "dfx": "0.10.1",
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000",
+      "type": "ephemeral"
+    }
+  },
+  "version": 1
+}
